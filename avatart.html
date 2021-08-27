@@ -1,0 +1,146 @@
+<html>
+
+        <head>
+
+            
+            <title>Avatar Geenerator</title>
+
+<script>
+
+window.onload = function()
+
+{
+    // today 27-8-2021 added to github
+    // HEAD LOAD
+    var avatarhead = new Image();
+    var avatarheadnum=Math.floor(Math.random()*18)+1;  // change this numner for more number of head
+    var avatarheadname="head"+avatarheadnum +".png";
+    avatarhead.src=avatarheadname;
+
+
+
+    
+    // EYE Brow Load
+    var avatareyebrow = new Image();
+    var avatareyebrownum=Math.floor(Math.random()*8)+1;  // change this numner for more number of head
+    var avatareyebrowname="eyebrow"+avatareyebrownum +".png";
+    avatareyebrow.src=avatareyebrowname;
+
+   // EYES LOAD
+   var avatareyes = new Image();
+    var avatareyesnum=Math.floor(Math.random()*15)+1;  // change this numner for more number of head
+    var avatareyesname="eyes"+avatareyesnum +".png";
+    avatareyes.src=avatareyesname;
+
+   // NOSE LOAD
+   var avatarnose = new Image();
+    var avatarnosenum=Math.floor(Math.random()*3)+1;  // change this numner for more number of head
+    var avatarnosename="nose"+avatarnosenum +".png";
+    avatarnose.src=avatarnosename;
+   
+    // LIPS LOAD
+    var avatarlips = new Image();
+    var avatarlipsnum=Math.floor(Math.random()*9)+1;  // change this numner for more number of head
+    var avatarlipsname="lips"+avatarlipsnum +".png";
+    avatarlips.src=avatarlipsname;
+
+
+// HEAD LOADED ...
+    avatarhead.onload=function()
+    { 
+        
+        buildavatar();
+    
+    }
+
+    // EYE BROW LOADED ...
+    avatareyebrow.onload=function()
+    { 
+        
+        buildavatar();
+    
+    }
+
+    // EYES LOADED ...
+    avatareyes.onload=function()
+    { 
+        
+        buildavatar();
+    
+    }
+
+      // NOSE LOADED ...
+      avatarnose.onload=function()
+    { 
+        
+        buildavatar();
+    
+    }
+
+    // LIPS LOADED ...
+    avatarlips.onload=function()
+    { 
+        
+        buildavatar();
+    
+    }
+function buildavatar()
+{
+    var canvas=document.getElementById('canvas')
+    var ctx = canvas.getContext('2d')
+    canvas.width=400;
+    canvas.height=400;
+
+    // ADD RANDOM COLOR TO THE CANVAS
+    var r=Math.floor(Math.random() * (255 - 100 + 1) + 100);
+    var g=Math.floor(Math.random() * (255 - 100 + 1) + 100);
+    var b=Math.floor(Math.random() * (255 - 100 + 1) + 100);
+    var bgcol = "#" + r.toString(16) + g.toString(16) + b.toString(16);
+    ctx.fillStyle = bgcol;
+    ctx.fillRect(0,0,400,400);
+
+
+
+    // DRAW HEAD
+    
+    ctx.drawImage(avatarhead,((400-avatarhead.width)/2),50);
+
+    // DRAW EYE BROWS
+    
+    ctx.drawImage(avatareyebrow,((400-avatareyes.width)/2),149);
+
+     // DRAW EYES
+    
+     ctx.drawImage(avatareyes,((400-avatareyes.width)/2),163);
+      
+     // DRAW NOSE
+    
+      ctx.drawImage(avatarnose,((400-avatarnose.width)/2),200);
+     
+      // DRAW LIPS
+    
+      ctx.drawImage(avatarlips,((400-avatarlips.width)/2),230);
+}
+
+}
+
+
+</script>
+
+
+        </head>
+
+
+<body>
+
+<div align="center" >
+
+    <canvas id="canvas" style="border: 5px solid #000000";></canvas>
+    <br>
+    <br>
+<button onclick="window.location.reload();">Generate!</button>
+</div>
+
+
+</body>
+</html>

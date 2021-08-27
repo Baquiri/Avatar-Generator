@@ -1,4 +1,19 @@
 <html>
+<!-- Author : Sarfaraz
+
+This code is written to submit for NFT Vision Hack - A scalable NFT art project track
+The purpoase of this code is to geneate ramdon  avatars  by gathering small images of part of the face
+here the face is divided into head,eyebrows,eyes, nose and lips . Each part is randomely picked and the face is drawn
+on canvas of ramdon colors every time. Each image being different it creates a unique face ramdomly and there are
+more than 10 million unique possible images of different emotions and baground colors.
+ This is only a concept to improve upon with more images of more parts. 
+we can generate faces of robot,animals or any objects -->
+
+
+
+
+
+
 
         <head>
 
@@ -13,7 +28,7 @@ window.onload = function()
     // today 27-8-2021 added to github
     // HEAD LOAD
     var avatarhead = new Image();
-    var avatarheadnum=Math.floor(Math.random()*18)+1;  // change this numner for more number of head
+    var avatarheadnum=Math.floor(Math.random()*18)+1;  // increase  this numner for more number of head images to be picked up
     var avatarheadname="head"+avatarheadnum +".png";
     avatarhead.src=avatarheadname;
 
@@ -22,25 +37,25 @@ window.onload = function()
     
     // EYE Brow Load
     var avatareyebrow = new Image();
-    var avatareyebrownum=Math.floor(Math.random()*8)+1;  // change this numner for more number of head
+    var avatareyebrownum=Math.floor(Math.random()*8)+1;  // Increase this numner for more number of eye brow images 
     var avatareyebrowname="eyebrow"+avatareyebrownum +".png";
     avatareyebrow.src=avatareyebrowname;
 
    // EYES LOAD
    var avatareyes = new Image();
-    var avatareyesnum=Math.floor(Math.random()*15)+1;  // change this numner for more number of head
+    var avatareyesnum=Math.floor(Math.random()*15)+1;  // Increase this numner for more number of eye shapes
     var avatareyesname="eyes"+avatareyesnum +".png";
     avatareyes.src=avatareyesname;
 
    // NOSE LOAD
    var avatarnose = new Image();
-    var avatarnosenum=Math.floor(Math.random()*3)+1;  // change this numner for more number of head
+    var avatarnosenum=Math.floor(Math.random()*3)+1;  // Increase this numner for more number of nose
     var avatarnosename="nose"+avatarnosenum +".png";
     avatarnose.src=avatarnosename;
    
     // LIPS LOAD
     var avatarlips = new Image();
-    var avatarlipsnum=Math.floor(Math.random()*9)+1;  // change this numner for more number of head
+    var avatarlipsnum=Math.floor(Math.random()*9)+1;  // Increase this numner for more number of lips
     var avatarlipsname="lips"+avatarlipsnum +".png";
     avatarlips.src=avatarlipsname;
 
